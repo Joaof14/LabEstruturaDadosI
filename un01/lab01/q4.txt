@@ -1,0 +1,3 @@
+Na expressão float *ptr; o que é do tipo float?
+O tipo da variável que o ponteiro está armazenando o endereço.
+
