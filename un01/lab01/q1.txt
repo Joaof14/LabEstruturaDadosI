@@ -1,0 +1,3 @@
+O que é e para que serve um ponteiro?
+Ponteiros são variáveis que armazenal endereços de memória, sendo utilizados para manipulação eficiente de memória eficiente 
+e permitindo acesso e modificação direta de variáveis.
