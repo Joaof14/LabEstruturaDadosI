@@ -9,6 +9,6 @@ int main(){
     char *indica = nome;
 
     printf("Endereço: %p\n", indica);
-    printf("Conteeúdo no endereço: %s\n", indica);
+    printf("Conteúdo no endereço: %s\n", indica);
     return 0;
 }
