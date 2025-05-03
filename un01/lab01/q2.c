@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// Declare uma variável e “printe” o valor dela e o seu endereço.
+
+
 int main(){
     //Declaração de variável
     int numero = 0;

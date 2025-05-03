@@ -5,9 +5,10 @@ foi atribuído ao ponteiro indica? */
 
 int main(){
 
-    char nome[2] = "ch";
-    char *indica = &nome;
+    char nome[10] = "ch";
+    char *indica = nome;
 
-    printf("%p", *indica);
+    printf("Endereço: %p\n", indica);
+    printf("Conteeúdo no endereço: %s\n", indica);
     return 0;
 }
