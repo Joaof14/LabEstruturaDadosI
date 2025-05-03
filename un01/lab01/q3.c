@@ -6,9 +6,9 @@ foi atribuído ao ponteiro indica? */
 int main(){
 
     char nome[10] = "ch";
-    char *indica = nome;
+    char *indica = nome; // maneira de armazenar o endereço
 
-    printf("Endereço: %p\n", indica);
-    printf("Conteúdo no endereço: %s\n", indica);
+    printf("Endereço: %p\n", indica); // maneira de mostrar o endereço
+    printf("Conteúdo no endereço: %s\n", indica); // maneira de mostrar o conteúdo no endereço.
     return 0;
 }

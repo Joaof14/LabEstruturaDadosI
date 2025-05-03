@@ -9,6 +9,8 @@ int main(){
     p = &x;
     y = *p + 200;
 
+    // Mostrar valores
+
     printf("x = %d\n", x);
     printf("y = %d\n", y);
     printf("p = %p\n", p);

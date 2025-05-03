@@ -8,7 +8,7 @@ int main(){
     int x = 3;
     int * px = &x;
 
-    int resultado = (*px)/3 ; // expressão
+    int resultado = (*px)/3 ; // expressão pedida
 
     printf("Resultado: %d\n", resultado);
 
