@@ -1,6 +1,10 @@
 #include <stdio.h>
 
 int main() {
-	printf("Estrutura de Dados II");
-	return 0;
+	FILE *arquivo;
+	arquivo = fopen("arquivo_texto.txt", "a");
+
+	fprintf(arquivo, "Esta é uma linha de exemplo. \n");
+	fprintf(arquivo, "esta eh outra linha de exemplo\n");
+	fclose(arquivo);
 }
