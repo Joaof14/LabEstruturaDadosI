@@ -1,10 +1,19 @@
 #include <stdio.h>
 
 int main() {
-	FILE *arquivo;
-	arquivo = fopen("arquivo_texto.txt", "a");
+	FILE *arquivo = fopen("arquivo_texto.txt", "r");
+	char linha[100];
 
-	fprintf(arquivo, "Esta é uma linha de exemplo. \n");
-	fprintf(arquivo, "esta eh outra linha de exemplo\n");
+	printf("Contéudo do arquivo:\n");
+
+	
+	while(fgets(linha, sizeof(linha), arquivo) != NULL)
+	{
+		printf("%s", linha);
+	}
+
+	printf("\n");
+
 	fclose(arquivo);
+	return 0;
 }
