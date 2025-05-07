@@ -1,25 +1,34 @@
 #include <stdio.h>
 
-enum Posicao {GOLEIRO, ZAGUEIRO, MEIOCAMPO, ATACANTE};
+typedef struct {
+	char nome[50];
+	int idade;
+	float altura;
+} Pessoa;
 
-struct Jogador {
-	char nome[20];
-	float salario;
-	int gols;
-	enum Posicao posicao;
-};
-
-struct Time {
-	char nome[30];
-	struct Jogador capitao;
-};
 
 int main() {
-	struct Jogador j1 = {"Cristiano", 80000, 45, ATACANTE};
 
-	if (j1.posicao == ATACANTE) {
-		printf("%s é atacante\n", j1.nome);
-	}
+	Pessoa p1 = {"Carlos", 30, 1.75};
+
+	FILE *arquivo = fopen("pessoa.bin", "wb");
+
+	fwrite(&p1, sizeof(Pessoa), 1, arquivo);
+	fclose(arquivo);
+
+	//size_t_fwrite(const void *ptr, size_t_size, size_t_count, FILE * stream);
+
+	Pessoa p2;
+
+	arquivo = fopen("pessoa.bin", "rb");
+
+	fread(&p2, sizeof(Pessoa), 1, arquivo);
+	fclose(arquivo);
+
+	printf("Nome: %s\nIdade: %d\nAltura: %.2f\n", p2.nome, p2.idade, p2.altura);
+
+	return 0;
+
 
 
 	return 0;
