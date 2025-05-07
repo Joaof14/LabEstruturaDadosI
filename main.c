@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+enum Posicao {GOLEIRO, ZAGUEIRO, MEIOCAMPO, ATACANTE};
+
 struct Jogador {
 	char nome[20];
 	float salario;
 	int gols;
+	enum Posicao posicao;
 };
 
 struct Time {
@@ -12,16 +15,12 @@ struct Time {
 };
 
 int main() {
-	struct Jogador jogadores[3] = {
-		{"Ronaldo", 50000, 30},
-		{"Messi", 75000, 40},
-		{"Neymar", 6000, 25}
-	};
+	struct Jogador j1 = {"Cristiano", 80000, 45, ATACANTE};
 
-	
-	for (int i = 0; i < 3; i++) {
-		printf("Nome: %s, Salário: %.2f, Gols: %d\n", jogadores[i].nome, jogadores[i].salario, jogadores[i].gols);
+	if (j1.posicao == ATACANTE) {
+		printf("%s é atacante\n", j1.nome);
 	}
+
 
 	return 0;
 }
