@@ -1,6 +1,10 @@
 #include <stdio.h> 
 
-/* enunciado da questão 1*/
+/*  As instruções abaixo resultam em um código válido? Explique o porquê.  
+float peso;  
+peso = 30;  
+cout << peso;  
+delete peso; */
 
 int main() {
     return 0;
