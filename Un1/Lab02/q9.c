@@ -24,7 +24,7 @@ void MostrarHorario(Horario * hr){
 int main() {
     Horario horaAtual;
     Horario * ptr = &horaAtual;
-    printf("Digite a hora atual, aperte enter, e em seguida digite os minutos: \n");
+    printf("Digite a hora atual no formato HH:MM\n");
     
     //Receber horas
     while (1) {
