@@ -5,5 +5,11 @@ endereço inválido. Para isso tente mostrar o conteúdo apontado por um ponteir
 recém-criado:*/
 
 int main() {
+    int * ptr;
+    printf("%d", *ptr);
     return 0;
 }
+
+/* O resultado foi: Falha de segmentação (imagem do núcleo gravada) 
+Provavelmente o ponteiro está apontando para lixo da memória.
+*/
