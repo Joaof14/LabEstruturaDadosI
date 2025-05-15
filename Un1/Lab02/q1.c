@@ -6,6 +6,19 @@ seguida mostre:
 a) Como criar uma variável de tipo peixe 
 b) Como criar um ponteiro para uma variável de tipo peixe. */
 
+typedef struct  {
+    char tipo[50];
+    float peso;
+    int comprimento;
+} peixe ;
+
 int main() {
+    //a) 
+    peixe p1;
+
+    //b)
+    peixe * ptr = &p1;
+
+
     return 0;
 }
