@@ -24,6 +24,7 @@ union Cor {
 
 };
 
+//Função para receber RGBA
 void ReceberRGBA(union Cor *cor) {
     while (1) {
         printf("Insira valores de cores RGBA (0-255) separados por espaço\n");
@@ -35,6 +36,7 @@ void ReceberRGBA(union Cor *cor) {
 
 }
 
+//Função para receber int32
 void ReceberInt32(union Cor *cor){
     //int max = 4294967295;
     while (1) {
