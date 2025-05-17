@@ -25,6 +25,7 @@ int main() {
 
     printf("As notas digitadas foram %.2f e %.2f\n", notas[0], notas[1] );
 
+    free(notas);
 
     return 0;
 }
