@@ -24,6 +24,7 @@ int main() {
 
     printf("Carro2\nModelo: %s, ano: %d: , valor: R$%.2f\n", c->modelo,c->ano, c->valor);
  
+    free(c);
     return 0;
 
 }

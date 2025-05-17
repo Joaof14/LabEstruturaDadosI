@@ -47,6 +47,7 @@ int main() {
 
     printf("Balão da letra B):\nDiâmetro: %f\nMarca:%s\nModelo:%d\n", b2->diametro, b2->marca, b2->modelo);
 
+    free(b2);
 
     return 0;
 }
