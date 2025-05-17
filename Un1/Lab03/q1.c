@@ -19,6 +19,12 @@ int main() {
     //Criar vetor de notas
     float *notas = malloc(numDeAlunos*sizeof(float));
 
+    if (notas == NULL)
+    {
+        printf("Falha na alocação de memória");
+        return 1;
+    }
+
     printf("Perfeito! Agora digite a nota de dois alunos\n");
     scanf("%f %f", &notas[0], &notas[1]);
 
