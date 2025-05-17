@@ -6,6 +6,24 @@ estático de 10 carros inicializando os dois primeiros carros respectivamente pa
 "Vectra", 2009, R$58.000,00 e "Polo", 2008, R$45.000,00. Use um ponteiro 
 para apontar para o segundo carro e exibir seus dados.*/
 
+typedef struct {
+    char modelo[30];
+    int ano;
+    float valor;
+} carro;
+
 int main() {
+    //Criação do vetor
+    carro carros[10] = {
+        {"Vectra", 2009, 58000},
+        {"Polo", 2008, 45000}
+    };
+
+    //ponteiro
+    carro *c = &carros[1];
+
+    printf("Carro2\nModelo: %s, ano: %d: , valor: R$%.2f\n", c->modelo,c->ano, c->valor);
+ 
     return 0;
+
 }
