@@ -48,7 +48,7 @@ void lerAluno(aluno * a){
     scanf("%u", &a->codigoDisciplina);
     while (1) 
     {
-        printf("Digite o número que corresponde à situação da discplina\n 0-Aprovado, 1-Trancado, 2-Reprovado");
+        printf("Digite o número que corresponde à situação da discplina\n 0-Aprovado, 1-Trancado, 2-Reprovado\n");
         scanf("%u", &a->situacao);
 
         if (a->situacao <= 2 && a->situacao>= 0){
