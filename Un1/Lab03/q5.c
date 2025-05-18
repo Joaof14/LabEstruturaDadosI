@@ -21,6 +21,7 @@ typedef struct {
 
 void exibirAluno(aluno * a){
     char sit[20];
+    //Switch case para retornar a situação adequada a partir do enum
     switch (a->situacao)
     {
     case 0:
@@ -42,6 +43,8 @@ void exibirAluno(aluno * a){
 }
 
 void lerAluno(aluno * a){
+
+    //Ler aluno, fazendo a verificação que a situação da disciplina está garantida no enum
     printf("Digite o nome do aluno\n");
     scanf("%s", a->nome);
     printf("Digite o código da discplina\n");
@@ -60,20 +63,25 @@ void lerAluno(aluno * a){
 }
 
 int main() {
+
+    //Receber número de alunos e alocar memória para vetor
     int numAlunos;
     printf("Digite o número de alunos: ");
     scanf("%d", &numAlunos);
     aluno *alunos = malloc(numAlunos*sizeof(aluno));
 
+    //Verificar se alocação de memória foi bem sucedida
     if (alunos == NULL)
     {
         printf("Erro na alocação de memória!\n");
         return 1;
     }
-    lerAluno(&alunos[0]);
 
+    //Chamar funções para ler e exibir alunos
+    lerAluno(&alunos[0]);
     exibirAluno(&alunos[0]);
 
+    //Liberar espaço
     free(alunos);
 
     return 0;
