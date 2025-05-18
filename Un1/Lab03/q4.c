@@ -25,6 +25,12 @@ void valorCarros(carro *vetorC){
 
 int main() {
     carro *c = malloc(2*sizeof(carro));
+
+    if(c == NULL) 
+    {
+        printf("Falha na alocação de memória");
+        return 1;
+    }
     
     printf("Entre com dados de dois carros\n");
     scanf("%s %d %f", c[0].modelo, &c[0].ano, &c[0].valor);
