@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <stdlib.h>
 
 /* Declare um ponteiro para inteiro, aloque memória dinamicamente para ele e 
 armazene o número 100 nessa memória. Mostre o conteúdo apontado. Peça que 
@@ -7,5 +8,21 @@ alocada. Libere o espaço alocado dinamicamente ao final do programa.
 */
 
 int main() {
+    int * ptr = malloc(sizeof(int));
+
+    if (ptr == NULL) 
+    {
+        printf("Erro na alocação de memória!");
+        return 1;
+    }
+
+    * ptr = 100;
+
+    printf("Conteúdo armazenado: %d ", *ptr);
+    printf("\nDigite o novo valor para esse bloco de memória: ");
+    scanf("%d", ptr);
+
+    free(ptr);
+
     return 0;
 }
