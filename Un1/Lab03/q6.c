@@ -9,3 +9,5 @@ delete peso; */
 int main() {
     return 0;
 }
+
+/*Resposta: Não, pois delete é usado apenas quando a variável é alocada dinâmicamente*/
