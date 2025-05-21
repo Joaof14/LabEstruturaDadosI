@@ -21,6 +21,5 @@ int main() {
 	fclose(arquivo);
 	return 0;
 
-	return 0;
 
 }
