@@ -9,13 +9,12 @@ typedef struct {
 
 int main() {
 
-	FILE * arquivo = fopen("data.txt", "r");
+	FILE * arquivo = fopen("f.txt", "r+");
 
-	char nome[50];
-	int idade;
+	fprintf(arquivo, "Joao Pedro");
 
-	while (fscanf(arquivo, "%s  %d", nome,  &idade) != EOF) {
-		printf("Nome: %s, Idade: %d\n", nome, idade);
+	while (fscanf(arquivo, "%s  %d") != EOF) {
+		printf("Nome: %s, Idade: %d\n");
 	}
 
 	fclose(arquivo);
