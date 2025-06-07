@@ -14,7 +14,8 @@ int main(){
     char nome[100];
     int peso, tamanho;
     if (arquivo == NULL )
-        {printf("Erro ao abrir arquivo");}
+        {printf("Erro ao abrir arquivo");
+        return 0;}
 
     while (fscanf(arquivo, "%99s %d %d", nome, &peso, &tamanho) == 3)
     {soma += (peso / 1000.0f);}

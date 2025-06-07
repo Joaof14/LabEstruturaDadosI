@@ -1,0 +1,2 @@
+Arquivo de texto generico para leitura.
+Esse arquivo sera utilizado nas questoes 5 e 6
