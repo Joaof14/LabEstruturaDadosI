@@ -2,21 +2,31 @@
 arquivo.*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
-int main(){
-    FILE * arquivo = fopen("arquivos/q2_ex.txt", "r");
-     if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo.\n");
+
+
+int main() {
+    FILE *arquivoEntrada = fopen("arquivos/q2_in.txt", "r");
+    FILE *arquivoSaida = fopen("arquivos/q2_out.txt", "w");
+
+    if (arquivoEntrada == NULL || arquivoSaida == NULL) {
+        printf("Erro ao abrir os arquivos.\n");
         return 1;
     }
-    int n;
 
-    while (fscanf(arquivo, "%d", &n) == 1){
-        printf("%d\n", n);
+    char palavra[100];
+    int numero;
+
+    //le todos os inteiros do arquivo e escreve no arquivo de saída
+    while (fscanf(arquivoEntrada, "%s", palavra) == 1)
+    {   
+        if _
     }
-    printf("%d", n);
 
-    fclose(arquivo);
-    return 1;
+    fclose(arquivoEntrada);
+    fclose(arquivoSaida);
 
+    return 0;
 }

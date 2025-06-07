@@ -19,7 +19,7 @@ int main(){
     while (fscanf(arquivo, "%99s %d %d", nome, &peso, &tamanho) == 3)
     {soma += (peso / 1000.0f);}
     
-    printf("%f kg de peixe pescados!", soma);
+    printf("\n%.3f kg de peixe pescados!\n", soma);
     fclose(arquivo);
     return 1;
 }
