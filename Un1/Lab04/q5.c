@@ -19,14 +19,13 @@ int isVogal(char c)
 int main()
 {
     FILE *arquivo = fopen("arquivos/q5_6.txt", "r");
-    int vogais = 0, consoantes = 0, outro = 0;
 
     if (arquivo == NULL)
     {
         printf("Não foi possível abrir o arquivo\n");
         return 0;
     }
-
+    int vogais = 0, consoantes = 0, outro = 0;
     char c;
     while ((c = fgetc(arquivo)) != EOF)
     {
@@ -44,6 +43,6 @@ int main()
         }
     }
     printf("vogais: %d\nconsoantes: %d\noutros: %d\n", vogais, consoantes, outro);
-
+    fclose(arquivo);
     return 1;
 }
