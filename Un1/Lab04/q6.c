@@ -5,6 +5,7 @@ dizer se a palavra está ou não presente no arquivo.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(){
     char arquivoNome[100];

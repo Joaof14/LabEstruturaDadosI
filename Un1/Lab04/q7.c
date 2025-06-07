@@ -7,3 +7,43 @@ O programa deve ler um número indefinido de palavras de um arquivo texto e,
 para cada palavra, verificar se ela é ou não um palíndromo. Exiba a quantidade
 de palíndromos encontrados no texto, bem como as palavras que são
 palíndromos, como mostrado abaixo:*/
+
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+
+int verificaPalindromo(const char *palavra){
+    int inicio = 0;
+    int fim = strlen(palavra) - 1;
+    while (fim > inicio)
+    {
+        if (tolower(palavra[inicio]) != tolower(palavra[fim])) {
+            return 0;
+        }
+        inicio += 1;
+        fim -= 1;
+    }
+    return 1;
+}
+
+int main(){
+    FILE * arquivo = fopen("arquivos/palindromos.txt", "r");
+     if (arquivo == NULL)
+    {
+        printf("Não foi possível abrir o arquivo\n");
+        return 0;
+    }
+    int contador = 0;
+    char palavra[100];
+    while (fscanf(arquivo, "%s", palavra)!= EOF){
+        if(verificaPalindromo(palavra)){
+            printf("%s\n", palavra);
+            contador ++;
+        }
+    }
+    printf("Foram encontradas %d palavras palíndromos nesse arquivo\n", contador);
+    fclose(arquivo);
+}
