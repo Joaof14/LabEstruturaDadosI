@@ -61,3 +61,5 @@ int main() {
     fclose(arquivo);
     return 0;
 }
+
+//O arquivo binario tem tamanho maior, o que é inesperado pois geralmente arquivos de texto por armazenarem mais informações costumam ser mais pesados.
