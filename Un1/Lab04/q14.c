@@ -6,3 +6,10 @@ uma matriz de números. Cada número de 3 dígitos representa a cor de um
 “bloco” da imagem. Guarde em um arquivo binário os valores de altura, largura
 e de cada bloco da imagem. Assim como o programa anterior, construa um
 menu para controlar as opções de armazenamento e exibição da imagem*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+        return 0;
+}

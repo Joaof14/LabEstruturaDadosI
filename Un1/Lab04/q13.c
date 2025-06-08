@@ -7,3 +7,10 @@ texto e 154 para o fundo. Considerando que as cores são valores de 3 dígitos d
 Guarde essas informações em um arquivo binário. O usuário deve ter a opção de
 guardar uma nova frase ou exibir a frase já armazenada através de um menu,
 como mostrado no exemplo abaixo.*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+        return 0;
+}

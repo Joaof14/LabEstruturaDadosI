@@ -2,3 +2,10 @@
 um arquivo binário chamado “interger.bin”. Ao entrar, o programa deve
 verificar se o arquivo “integer.bin” existe, e em caso positivo, deve ler e exibir o
 número na tela.*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+        return 0;
+}

@@ -8,3 +8,10 @@ b) Modifique o programa obtido no item anterior para ler e exibir os peixes
 cadastrados no arquivo binário antes de permitir que o usuário faça um
 novo cadastro.
 */
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+        return 0;
+}
