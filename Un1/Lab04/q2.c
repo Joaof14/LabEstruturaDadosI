@@ -2,10 +2,6 @@
 arquivo.*/
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-
-
 
 int main() {
     FILE *arquivoEntrada = fopen("arquivos/q2_in.txt", "r");
@@ -17,12 +13,15 @@ int main() {
     }
 
     char palavra[100];
-    int numero;
+    char *endptr;
+    long numero;
 
-    //le todos os inteiros do arquivo e escreve no arquivo de saída
-    while (fscanf(arquivoEntrada, "%s", palavra) == 1)
-    {   
-        if _
+    while (fscanf(arquivoEntrada, "%s", palavra) == 1) {
+        numero = strtol(palavra, &endptr, 10);
+
+        if (endptr != palavra) {
+            fprintf(arquivoSaida, "%ld\n", numero);
+        }
     }
 
     fclose(arquivoEntrada);
