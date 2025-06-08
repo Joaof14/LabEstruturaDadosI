@@ -21,6 +21,16 @@ forma mais fácil de conseguir fazer essa separação por sexo?
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void a(){
+    //Não, pois os dados nao trazem essa informação
+}
+
+
+void b(){
+    //acrescentando um campo sexo na struct alunos que recebesse 'F' ou 'M'
+}
+
 typedef struct
 {
     char nome[50];
