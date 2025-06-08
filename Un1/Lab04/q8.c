@@ -21,14 +21,14 @@ forma mais fácil de conseguir fazer essa separação por sexo?
 #include <stdio.h>
 #include <stdlib.h>
 
-
-void a(){
-    //Não, pois os dados nao trazem essa informação
+void a()
+{
+    // Não, pois os dados nao trazem essa informação
 }
 
-
-void b(){
-    //acrescentando um campo sexo na struct alunos que recebesse 'F' ou 'M'
+void b()
+{
+    // acrescentando um campo sexo na struct alunos que recebesse 'F' ou 'M'
 }
 
 typedef struct
@@ -115,7 +115,7 @@ int main()
                     printf("%s %s\n", vetorAlunos[j].nome, vetorAlunos[j].sobrenome);
                 }
             }
-        }   
+        }
     }
 
     free(vetorAlunos);
