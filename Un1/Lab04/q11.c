@@ -22,7 +22,7 @@ int main()
         printf("Digite um numero inteiro para armazenar: ");
         scanf("%d", &numero);
 
-        arquivo = fopen("integer.bin", "wb");
+        arquivo = fopen("arquivos/integer.bin", "wb");
         if (arquivo == NULL)
         {
                 printf("Erro ao criar o arquivo!\n");

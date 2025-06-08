@@ -76,7 +76,7 @@ int main()
         arquivo = fopen("arquivos/texto_colorido.bin", "rb+");
         if (arquivo == NULL)
         {
-                arquivo = fopen("texto_colorido.bin", "wb+");
+                arquivo = fopen("arquivos/texto_colorido.bin", "wb+");
                 if (arquivo == NULL)
                 {
                         printf("Erro ao criar o arquivo!\n");
