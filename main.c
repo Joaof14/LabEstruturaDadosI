@@ -1,24 +1,42 @@
 #include <stdio.h>
 
-typedef struct {
-	char nome[50];
-	int idade;
-	float altura;
-} Pessoa;
-
 
 int main() {
 
-	FILE * arquivo = fopen("f.txt", "r+");
+	int vetor[10] = {1,3,5,7,9,11,13,15,17,19};
+	
+	int elemento = 5;
+	
 
-	fprintf(arquivo, "Joao Pedro");
-
-	while (fscanf(arquivo, "%s  %d") != EOF) {
-		printf("Nome: %s, Idade: %d\n");
+	//Busca sequencial
+	for (int i = 0; i < 10; i++){
+		if (vetor[i] == elemento) {
+			printf("Busca sequencial\n%d\n", i);
+			break;
+		}
 	}
 
-	fclose(arquivo);
-	return 0;
+	//Busca binária
+	int inicio = 0;
+	int fim = 9;
+	int meio;
+	while (inicio < fim){
+		meio = (inicio + fim)/2;
+		if(vetor[meio] == elemento) {
+			printf("Busca Binária\nValor %d encontrado na posicão %d.\n", elemento, meio);
+			break;
+		}
+		else if ( vetor[meio] > elemento){
+			fim = meio + 1;
+		}
+		else {
+			inicio = meio + 1;
+		}
 
+	}
+	
+	return -1;
 
 }
+
+
