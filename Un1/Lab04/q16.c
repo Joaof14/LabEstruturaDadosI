@@ -33,8 +33,6 @@ void salvarSoldado(Soldado * soldier ){
 
         fclose(arquivo);
 }
-
-
         
 
 void RegistrarSoldado(Soldado * soldier){
