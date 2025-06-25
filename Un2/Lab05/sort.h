@@ -7,8 +7,6 @@ void mergeSort();
 
 void gnomeSort(int *vetor, int tamanho);
 
-void shellSort();
-
 void insertionSort(int *vetor, int tamanho);
 
 void quickSort(int * vetor, int left, int right);

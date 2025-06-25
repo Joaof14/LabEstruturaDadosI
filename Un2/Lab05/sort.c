@@ -53,12 +53,22 @@ void mergeSort(){
 
 
 
-void shellSort(){
 
-}
 
 
 void quickSort(int * vetor, int left, int right){
-    
+    int pivo = vetor[left];
+    int i = 0, aux = 0;
+    while (i < right){
+        for (int j = 1; j < right; j++){
+            if (vetor[j] <= pivo){
+                i++;
+                aux = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = aux;
+            }
+        }
+
+    }
 
 }
