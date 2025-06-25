@@ -47,15 +47,18 @@ void gnomeSort(int *vetor, int tamanho){
     //Printar
 }
 
-void mergeSort(int *vetor, int tamanho){
+void mergeSort(){
 
 }
 
 
 
-void shellSort(int *vetor, int tamanho){
+void shellSort(){
 
 }
 
 
-void quickSort(int *vetor, int tamanho){}
+void quickSort(int * vetor, int left, int right){
+    
+
+}
