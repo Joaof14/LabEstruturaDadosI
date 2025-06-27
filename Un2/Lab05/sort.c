@@ -30,6 +30,44 @@ void bubbleSort(int *vetor, int tamanho){
     }
 }
 
+void quickSort(int * vetor, int left, int right){
+    
+    
+    int i, j, pivo, aux;
+    i = left;
+    j =  right -1;
+    pivo = vetor[(left + right)/2];
+
+
+
+    while (i <= j) {
+
+        while (vetor[i] < pivo && i<right){
+            i++;
+        }
+
+        while (vetor[j] > pivo && j > left){
+            j--;
+        }
+
+        if (i <= j) {
+            aux = vetor[i];
+            vetor[i] = vetor[j];
+            vetor[j] = aux;
+            i++;
+            j--;
+        }
+    }
+    if (j> left) {
+        quickSort(vetor, left, j+1);
+    }
+    if (i < right - 1){
+        quickSort(vetor, i, right);
+    }
+
+}
+
+
 void gnomeSort(int *vetor, int tamanho){
     int pos = 0, aux;
     while(pos < tamanho){
@@ -44,31 +82,65 @@ void gnomeSort(int *vetor, int tamanho){
         }
     }
 
-    //Printar
+    
 }
 
-void mergeSort(){
+void merge(int * vetor, int left, int h, int right){
+    int i, j, k;
+    int n1 = h - left + 1;
+    int n2 = right - h;
 
-}
+    int L[n1], R[n2];
+
+    for (i = 0; i < n1; i ++) {
+        L[i] = vetor[left + i];
+    }
+
+    for (j = 0; j< n2; j++){
+        R[j] = vetor[h + 1 + j];
+    }
+
+    i = 0;
+    j = 0;
+    k = left;
 
 
 
-
-
-
-void quickSort(int * vetor, int left, int right){
-    int pivo = vetor[left];
-    int i = 0, aux = 0;
-    while (i < right){
-        for (int j = 1; j < right; j++){
-            if (vetor[j] <= pivo){
-                i++;
-                aux = vetor[i];
-                vetor[i] = vetor[j];
-                vetor[j] = aux;
-            }
+    while (i< n1 && j < n2) {
+        if (L[i] <= R[j]){
+            vetor[k] = L[i];
+            i++;
         }
+        else{
+            vetor[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    while( i < n1) {
+        vetor[k] = L[i];
+        i++;
+        k++;
+    }
 
+    while(j < n2){
+        vetor[k] = R[j];
+        j++;
+        k++;
     }
 
 }
+
+void mergeSort(int * vetor, int left, int right){
+    if (left < right) {
+        int h = left + (right - left) /2 ;
+        mergeSort(vetor, left, h);
+        mergeSort(vetor,  h+1, right);
+        merge(vetor, left, h, right);
+    }
+}
+
+
+
+
+
