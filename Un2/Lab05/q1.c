@@ -82,3 +82,31 @@ int main(){
 
     return 0;
 }
+
+
+/* Os numeros para análise falam por si só sobre quem é melhor: 
+
+Array de 1000 elementos
+
+Quick sort: 0.000269 segundos
+Merge sort: 0.000342 segundos
+Insertion sort: 0.002069 segundos
+Buble sort: 0.005431 segundos
+
+
+Array de 100000 elementos
+
+Quick sort: 0.029203 segundos
+Merge sort: 0.047954 segundos
+Insertion sort: 15.905101 segundos
+Buble sort: 66.871464 segundos
+
+
+Array de 1000000 elementos
+
+Quick sort: 0.221404 segundos
+Merge sort: 0.391771 segundos
+Insertion sort: Excesso de tempo
+Buble sort: Excesso de tempo
+
+*/
