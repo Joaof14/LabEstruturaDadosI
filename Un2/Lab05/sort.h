@@ -11,6 +11,6 @@ void insertionSort(int *vetor, int tamanho);
 
 void quickSort(int * vetor, int left, int right);
 
-void merge(int * vetor, int left, int h, int right);
+void mergeSort(int * vetor, int left, int right);
 
 #endif

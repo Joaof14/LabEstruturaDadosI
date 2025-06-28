@@ -11,6 +11,7 @@ void insertionSort(int *vetor, int tamanho){
 
         while(j>= 0 && vetor[j] > pivo){
             vetor[j+1] = vetor[j];
+            j--;
         }
         vetor[j+1] = pivo;
     }
