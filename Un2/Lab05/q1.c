@@ -24,7 +24,7 @@ int main(){
     double tempo_gasto;
     for (int n = 0; n < 3; n++) {
         int tamanho = tamanhos[n];
-        printf("\nArray de %d elementos\n\n", tamanho);
+        printf("\n\nArray de %d elementos\n\n", tamanho);
 
         int * vetor_original = (int *) malloc(tamanho * sizeof(int));
         int * vetor = (int *)malloc(tamanho*sizeof(int));
