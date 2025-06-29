@@ -7,12 +7,12 @@
 
 
 /*
-Implemente os algoritmos de ordenação vistos na disciplina(bubble,insertion, merge, quick)
-e compare seus tempos de execução
-
+Implemente os dois algoritmos de busca vistos em sala(Sequencial e Binária)
+e em seguida compare seus tempos de busca nos seguintes cenários:
 a) Array com 1000 elementos
-b) Array com 100000 elementos
-c) Array com 1000000 elementos
+b) Array com 100000
+c) Array com 1000000
+d) Buscando uma palavra em um texto
 */
 
 int main(){

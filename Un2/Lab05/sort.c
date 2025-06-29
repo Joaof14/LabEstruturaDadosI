@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 
 
 void insertionSort(int *vetor, int tamanho){
@@ -143,5 +143,106 @@ void mergeSort(int * vetor, int left, int right){
 
 
 
+void bubbleSortChar(char **vetor, int tamanho) {
+    char *aux;
+    for (int i = 0; i < tamanho - 1; i++) {
+        for (int j = 0; j < tamanho - 1 - i; j++) {
+            if(strcmp(vetor[j], vetor[j+1]) > 0) {
+                aux = vetor[j];
+                vetor[j] = vetor[j+1];
+                vetor[j+1] = aux;
+            }
+        }
+    }
+}
 
+void insertionSortChar(char **vetor, int tamanho) {
+    char *pivo;
+    int j;
+    for (int i = 1; i < tamanho; i++) {
+        pivo = vetor[i];
+        j = i - 1;
+
+        while(j >= 0 && strcmp(vetor[j], pivo) > 0) {
+            vetor[j+1] = vetor[j];
+            j--;
+        }
+        vetor[j+1] = pivo;
+    }
+}
+
+void quickSortChar(char **vetor, int left, int right) {
+    int i = left;
+    int j = right;
+    char *pivo = vetor[(left + right) / 2];
+    char *aux;
+
+    while (i <= j) {
+        while (strcmp(vetor[i], pivo) < 0) i++;
+        while (strcmp(vetor[j], pivo) > 0) j--;
+        
+        if (i <= j) {
+            aux = vetor[i];
+            vetor[i] = vetor[j];
+            vetor[j] = aux;
+            i++;
+            j--;
+        }
+    }
+
+    if (left < j) quickSortChar(vetor, left, j);
+    if (i < right) quickSortChar(vetor, i, right);
+}
+
+void mergeChar(char **vetor, int left, int h, int right) {
+    int i, j, k;
+    int n1 = h - left + 1;
+    int n2 = right - h;
+
+    char *L[n1], *R[n2];
+
+    for (i = 0; i < n1; i++) {
+        L[i] = vetor[left + i];
+    }
+
+    for (j = 0; j < n2; j++) {
+        R[j] = vetor[h + 1 + j];
+    }
+
+    i = 0;
+    j = 0;
+    k = left;
+
+    while (i < n1 && j < n2) {
+        if (strcmp(L[i], R[j]) <= 0) {
+            vetor[k] = L[i];
+            i++;
+        } else {
+            vetor[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    
+    while(i < n1) {
+        vetor[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while(j < n2) {
+        vetor[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSortChar(char **vetor, int left, int right) {
+    if (left < right) {
+        int h = left + (right - left) / 2;
+        mergeSortChar(vetor, left, h);
+        mergeSortChar(vetor, h + 1, right);
+        mergeChar(vetor, left, h, right);
+    }
+}
 
