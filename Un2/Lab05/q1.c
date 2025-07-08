@@ -213,4 +213,10 @@ Merge sort: 0.000611 segundos
 Insertion sort: 0.004569 segundos
 Bubble sort: 0.015457 segundos
 
+
+O quick sort e merge sort apresentaram melhor desempenho como esperado, com pequena vantagem para o quick sort.
+
+O insertion sort e o bubble ort apresentaram um tempo de execução desmasiadamente grande 
+à medida que o numero de elementos no array aumenta, devido as suas respectivas complexidades algoritmicas.
+
 */

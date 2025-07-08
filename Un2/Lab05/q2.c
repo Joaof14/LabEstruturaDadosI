@@ -177,20 +177,29 @@ int main(){
     return 0;
 }
 
-/* Digite um valor de 0 a 1000 para procurar nos vetores: 2
+/* Digite um valor de 0 a 1000 para procurar nos vetores: 
+
+Digite um valor de 0 a 1000 para procurar nos vetores: 3
 
 Array de 1000 elementos
 
-Binary search: 0.000003 segundos; Valor encontrado na posição 2
-Linear search: 0.000001 segundos; Valor encontrado na posição 1
+Binary search: 0.000005 segundos; Valor não encontrado
+Linear search: 0.000011 segundos; Valor não encontrado
 
 Array de 100000 elementos
 
-Binary search: 0.000003 segundos; Valor encontrado na posição 291
-Linear search: 0.000002 segundos; Valor encontrado na posição 200
+Binary search: 0.000004 segundos; Valor encontrado na posição 389
+Linear search: 0.000004 segundos; Valor encontrado na posição 300
 
 Array de 1000000 elementos
 
-Binary search: 0.000002 segundos; Valor encontrado na posição 2928
-Linear search: 0.000012 segundos; Valor encontrado na posição 1992
+Binary search: 0.000003 segundos; Valor encontrado na posição 3905
+Linear search: 0.000020 segundos; Valor encontrado na posição 3008
+
+Binary search: 0.000009 segundos; Palavra não encontrada
+Linear search: 0.002693 segundos; Palavra não encontrada
+
+
+O binary search se mostrou mais eficaz, oq ja era esperado, uma vez que o linear search apresenta complexidade O²(n)
+
 */
