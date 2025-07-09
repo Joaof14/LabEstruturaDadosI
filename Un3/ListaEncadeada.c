@@ -41,7 +41,9 @@ void inserir_no_fim (No** cabeca, int valor){
 }
 
 void remover_no(No ** cabeca, int chave){
-    if(!* cabeca) return;
+    if(!* cabeca) {
+        printf("Lista vazia");
+        return;}
 
     No* temp = * cabeca;
     No* anterior = NULL;
@@ -64,7 +66,9 @@ void remover_no(No ** cabeca, int chave){
 }
 
 void buscar(No**cabeca, int chave){
-    if(!* cabeca) return;
+    if(!* cabeca) {
+        printf("Lista vazia");
+        return;}
 
     No* temp = * cabeca;
 
@@ -85,7 +89,9 @@ void buscar(No**cabeca, int chave){
 
 
 void exibir_lista(No** cabeca){
-    if (!* cabeca) return;
+    if(!* cabeca) {
+        printf("Lista vazia");
+        return;}
     No* atual = *cabeca;
     while(atual) {
         printf("%d ", atual->dado);
