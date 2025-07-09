@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct {
+typedef struct No {
     int dado;
     struct No* proximo;
 } No;
@@ -33,7 +33,6 @@ void inserir_no_fim (No** cabeca, int valor){
         return;
     }
 
-
     No* atual = *cabeca;
     while(atual->proximo){
         atual = atual->proximo;
@@ -64,15 +63,38 @@ void remover_no(No ** cabeca, int chave){
     free(temp);
 }
 
+void buscar(No**cabeca, int chave){
+    if(!* cabeca) return;
 
-void exibir_lista(No ** cabeca){
-    No* atual = cabeca;
+    No* temp = * cabeca;
+
+    while(temp && temp->dado != chave) {
+        temp = temp->proximo;
+    }
+
+    if(!temp) {
+        printf("Valor %d não está presente na lista\n", chave);    
+        return;
+    } //nao achou e retorna;
+
+    printf("Valor %d está presente na lista\n", chave);
+
+    free(temp);
+}
+
+
+
+void exibir_lista(No** cabeca){
+    if (!* cabeca) return;
+    No* atual = *cabeca;
     while(atual) {
         printf("%d ", atual->dado);
         atual = atual->proximo;
     }
-    printf("NULL");
+    printf("\nNULL-Fim da lista\n");
 }
+
+
 
 int main(){
     No * lista = NULL;
@@ -83,6 +105,9 @@ int main(){
     printf("Lista Original: ");
 
     exibir_lista(&lista);
+
+    buscar(&lista, 10);
+    buscar(&lista, 40);
 
 
 
