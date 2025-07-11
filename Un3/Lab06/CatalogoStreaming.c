@@ -67,8 +67,6 @@ No* criar_no(){
         novo -> proximo = NULL;
    }
    return novo;
-
- return novo; 
 }
 
 
