@@ -25,7 +25,7 @@ int isEmpty(Stack * stack){
     return stack->top == NULL;
 }
 
-void push(Stack * stack, int value){
+void push(Stack * stack, char value){
     Node * newNode = (Node*)malloc(sizeof(Node));
 
     newNode->data = value;
@@ -36,7 +36,7 @@ void push(Stack * stack, int value){
 char pop(Stack * stack) {
     if (isEmpty(stack)){
         printf("Erro de fila vazia\n");
-        return '/0';
+        return '\0';
     }
 
     Node * temp = stack->top;
@@ -50,7 +50,7 @@ char pop(Stack * stack) {
 char peek(Stack* stack){
     if (isEmpty(stack)){
         printf("Erro de fila vazia\n");
-        return '/0';
+        return '\0';
     }
     return stack->top->data;
 
@@ -99,8 +99,17 @@ int verificaParenteses(const char * entrada){
 
 
 int main(){
+    char entrada[100];
+    printf("Digite a sequência de parênteses/colchetes/chaves: ");
+    scanf("%s", entrada);
     
+    if (verificaParenteses(entrada)) {
+        printf("Entrada Balanceada\n");
+    } else {
+        printf("Entrada não Balanceada\n");
+    }
     return 0;
+
 }
 
 
