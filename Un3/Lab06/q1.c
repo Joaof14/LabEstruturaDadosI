@@ -40,7 +40,7 @@ char pop(Stack * stack) {
     }
 
     Node * temp = stack->top;
-    int poppedValue = temp->data;
+    char poppedValue = temp->data;
     stack->top =temp->next;
     free(temp);
     return poppedValue;
@@ -71,12 +71,12 @@ void display(Stack * stack){
 }
 
 int verificaParenteses(const char * entrada){
-     Stack stack;
+    Stack stack;
     initStack(&stack);
     
     for (int i = 0; entrada[i] != '\0'; i++) {
         char c = entrada[i];
-        // Empilha caracteres de abertura
+        //empilha abertura de parenteses
         if (c == '(' || c == '[' || c == '{') {
             push(&stack, c);
         } else if (c == ')' || c == ']' || c == '}') {
@@ -85,7 +85,7 @@ int verificaParenteses(const char * entrada){
                 return 0; 
             }
             char top = pop(&stack);
-            // Verifica correspondência
+            //verifica correspondência
             if ((c == ')' && top != '(') ||
                 (c == ']' && top != '[') ||
                 (c == '}' && top != '{')) {

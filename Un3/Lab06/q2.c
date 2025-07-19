@@ -41,7 +41,7 @@ char pop(Stack * stack) {
     }
 
     Node * temp = stack->top;
-    int poppedValue = temp->data;
+    char poppedValue = temp->data;
     stack->top =temp->next;
     stack->size--;
     free(temp);
